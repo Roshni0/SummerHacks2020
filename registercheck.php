@@ -39,6 +39,12 @@
                     $email=$_POST["email"];
                     $password=$_POST["pw"];
                     $phash=password_hash($password,PASSWORD_DEFAULT);
+                    // echo $firstname;
+                    // echo $surname;
+                    // echo $username;
+                    // echo $email;
+                    // echo $password;
+                    // echo $phash;
                     if (password_Verify($password, $phash)){
                         $sql="SELECT MAX(id) as max from userdetail";
                         $result=$conn->query($sql);
@@ -47,17 +53,21 @@
                                 $id=$row["max"];
                             }
                         }
+                        mysql_ping($conn);
+                        $conn=connection::getConn();
                         $id=$id+1;
-                        $sql="INSERT INTO `userdetail`('id',`firstname`, `surname`, `username`, `email`, `password`) VALUES (`$id`,`$firstname`,`$surname`,`$username`,`$email`,`$phash`)";
-                        echo "done";
+                        //echo $id;
+                        $sql="INSERT INTO `userdetail`(`id`,`firstname`, `surname`, `username`, `email`, `password`) VALUES (`$id`,`$firstname`,`$surname`,`$username`,`$email`,`hello`)";
+                        echo $sql;
+                        echo "donesertyue";
                         if ($conn->query($sql)===TRUE){
                             echo "WELCOME ".$firstname." ".$surname;
                             //go to the home page
                         }else{
-                            echo "connection error";
+                            echo "connection error for entry";
                         }
                     }else{
-                        echo "connection error";
+                        echo "connection error for password verify";
                     }
                 }else{
                     echo "Password too weak. Must have a digit, a lowercase letter, uppercase letter, special character and between 6 to 9 characters.";
