@@ -1,6 +1,7 @@
 <?php
 //CREATE TABLE `summer`.`userdetail` ( `id` INT(10) NOT NULL , `firstname` VARCHAR(50) NOT NULL , `surname` VARCHAR(50) NOT NULL , `username` VARCHAR(15) NOT NULL , `email` TEXT NOT NULL , `password` VARCHAR(10) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
-    function password_strength_check($password, $min_len = 6, $max_len = 9, $req_digit = 1, $req_lower = 1, $req_upper = 1, $req_symbol = 1) {
+//CREATE TABLE `teach`.`userdetail` ( `id` INT NOT NULL AUTO_INCREMENT , `firstname` VARCHAR(50) NOT NULL , `surname` VARCHAR(50) NOT NULL , `username` VARCHAR(50) NOT NULL , `email` VARCHAR(100) NOT NULL , `password` VARCHAR(200) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+function password_strength_check($password, $min_len = 6, $max_len = 9, $req_digit = 1, $req_lower = 1, $req_upper = 1, $req_symbol = 1) {
         $regex = '/^';
         if ($req_digit == 1) { $regex .= '(?=.*\d)'; } // Match at least 1 digit
         if ($req_lower == 1) { $regex .= '(?=.*[a-z])'; } // Match at least 1 lowercase letter
@@ -39,6 +40,12 @@
                     $email=$_POST["email"];
                     $password=$_POST["pw"];
                     $phash=password_hash($password,PASSWORD_DEFAULT);
+                    // echo $firstname;
+                    // echo $surname;
+                    // echo $username;
+                    // echo $email;
+                    // echo $password;
+                    // echo $phash;
                     if (password_Verify($password, $phash)){
                         $sql="SELECT MAX(id) as max from userdetail";
                         $result=$conn->query($sql);
@@ -48,16 +55,20 @@
                             }
                         }
                         $id=$id+1;
-                        $sql="INSERT INTO `userdetail`('id',`firstname`, `surname`, `username`, `email`, `password`) VALUES (`$id`,`$firstname`,`$surname`,`$username`,`$email`,`$phash`)";
-                        echo "done";
+                        $firstname="amy";
+                        //echo $id;
+                    $sql="INSERT INTO `userdetail`(`id`,`firstname`, `surname`, `username`, `email`, `password`) VALUES ('$id','$firstname','$surname','$username','$email','$phash')";
+                    //echo "done";
+                    //echo $sql;
                         if ($conn->query($sql)===TRUE){
                             echo "WELCOME ".$firstname." ".$surname;
                             //go to the home page
                         }else{
-                            echo "connection error";
+                            echo "connection error for entry";
                         }
+                        
                     }else{
-                        echo "connection error";
+                        echo "connection error for password verify";
                     }
                 }else{
                     echo "Password too weak. Must have a digit, a lowercase letter, uppercase letter, special character and between 6 to 9 characters.";
