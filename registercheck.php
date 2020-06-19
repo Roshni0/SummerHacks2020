@@ -54,6 +54,8 @@ function password_strength_check($password, $min_len = 6, $max_len = 9, $req_dig
                                 $id=$row["max"];
                             }
                         }
+                        mysql_ping($conn);
+                        $conn=connection::getConn();
                         $id=$id+1;
                         $firstname="amy";
                         //echo $id;
