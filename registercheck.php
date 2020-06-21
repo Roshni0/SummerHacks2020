@@ -1,6 +1,6 @@
 <?php
 //CREATE TABLE `summer`.`userdetail` ( `id` INT(10) NOT NULL , `firstname` VARCHAR(50) NOT NULL , `surname` VARCHAR(50) NOT NULL , `username` VARCHAR(15) NOT NULL , `email` TEXT NOT NULL , `password` VARCHAR(10) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
-//CREATE TABLE `teach`.`userdetail` ( `id` INT NOT NULL AUTO_INCREMENT , `firstname` VARCHAR(50) NOT NULL , `surname` VARCHAR(50) NOT NULL , `username` VARCHAR(50) NOT NULL , `email` VARCHAR(100) NOT NULL , `password` VARCHAR(200) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+//CREATE TABLE `summer`.`progressdetail` ( `id` INT(5) NOT NULL , `language` VARCHAR(200) NOT NULL , `level` INT(10) NOT NULL ) ENGINE = InnoDB;
 function password_strength_check($password, $min_len = 6, $max_len = 9, $req_digit = 1, $req_lower = 1, $req_upper = 1, $req_symbol = 1) {
         $regex = '/^';
         if ($req_digit == 1) { $regex .= '(?=.*\d)'; } // Match at least 1 digit
@@ -16,6 +16,7 @@ function password_strength_check($password, $min_len = 6, $max_len = 9, $req_dig
     }
     require "connection.php";
     $conn=connection::getConn();
+    session_start();
     $username = $_POST["uname"];
     $sql="SELECT * FROM `userdetail` WHERE username='$username'";
     $result=$conn->query($sql);
@@ -46,6 +47,7 @@ function password_strength_check($password, $min_len = 6, $max_len = 9, $req_dig
                     // echo $email;
                     // echo $password;
                     // echo $phash;
+                    
                     if (password_Verify($password, $phash)){
                         $sql="SELECT MAX(id) as max from userdetail";
                         $result=$conn->query($sql);
@@ -62,8 +64,18 @@ function password_strength_check($password, $min_len = 6, $max_len = 9, $req_dig
                     $sql="INSERT INTO `userdetail`(`id`,`firstname`, `surname`, `username`, `email`, `password`) VALUES ('$id','$firstname','$surname','$username','$email','$phash')";
                     //echo "done";
                     //echo $sql;
+                    $language = "none";
+                    $level=0;
                         if ($conn->query($sql)===TRUE){
-                            echo "WELCOME ".$firstname." ".$surname;
+                            $sql="INSERT INTO `progressdetail`(`id`, `language`, `level`) VALUES ('$id','$language','$level')";
+                            if ($conn->query($sql)===TRUE){
+                                $_SESSION["userid"] = $id;
+                                echo "WELCOME ".$firstname." ".$surname;
+                                $goTo="Location:homepage.php";
+                                header($goTo);
+                            }else{
+                                echo "connection error for progress details";
+                            }
                             //go to the home page
                         }else{
                             echo "connection error for entry";
