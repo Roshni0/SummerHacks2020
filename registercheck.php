@@ -67,7 +67,7 @@ function password_strength_check($password, $min_len = 6, $max_len = 9, $req_dig
                     $language = "none";
                     $level=0;
                         if ($conn->query($sql)===TRUE){
-                            $sql="INSERT INTO `progressdetail`(`id`, `language`, `level`) VALUES ('$id','$language','$level')";
+                            $sql="INSERT INTO `progressdetail`(`id`, `language`, `level`) VALUES ('$id','$language','$level')"; 
                             if ($conn->query($sql)===TRUE){
                                 $_SESSION["userid"] = $id;
                                 echo "WELCOME ".$firstname." ".$surname;
