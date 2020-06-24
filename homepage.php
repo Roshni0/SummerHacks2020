@@ -53,30 +53,62 @@ body {font-family: Arial;}
 
 <div id="Home" class="tabcontent">
   <h3>Courses</h3>
-  <a href='python.html'>
-    <button>Python</button>
-  </a>
+  <a href='python.php'><button>Python</button></a>
   <p></p>
-  <a href='C++.html'>
-    <button>C++</button>
-  </a>
+  <a href='CPlus.php'><button>C++</button></a>
   <p></p>
-  <a href='HTML.html'>
-    <button>HTML</button>
-  </a>
+  <a href='HTML.php'><button>HTML</button></a>
   <p></p>
-  <a href='scratch.html'>
-    <button>Scratch</button>
-  </a>
+  <a href='scratch.php'><button>Scratch</button></a>
 </div>
 
 <div id="Learn" class="tabcontent">
   <h3>Learn</h3>
-  <p>Courses you have signed up for</p> 
-  <!-- 
-if not signed up for any, print oops not signed up for anything
-else, display the button + picture
-      !-->
+  <?php
+    require "connection.php";
+    $conn=connection::getConn();
+    session_start();
+    $id=$_SESSION["userid"];
+    $sql="SELECT * FROM `userdetail` WHERE id='$id'";
+    $result=$conn->query($sql);
+    if ($result->num_rows>0){
+      while($row = $result->fetch_assoc()) {
+        $fname=$row["firstname"];
+      }
+    }
+    echo "Hello: ".$fname;
+    echo "<br>";
+    $sql="SELECT * FROM `progressdetail` WHERE id='$id'";
+    $result=$conn->query($sql);
+    if ($result->num_rows>0){
+      while($row = $result->fetch_assoc()) {
+        $language=$row["language"];
+      }
+    }
+    $noth=0;
+    echo "You have signed up for: ";
+    echo "<br>";
+    if(strpos($language,"p") !== false){
+      echo "<a href='python.php'><button>Python</button></a>";
+      echo "<br>";
+      $noth=1;
+    }if(strpos($language,"c") !== false){
+      echo "<a href='CPlus.php'><button>C++</button></a>";
+      echo "<br>";
+      $noth=1;
+    }if(strpos($language,"h") !== false){
+      echo "<a href='HTML.php'><button>HTML</button></a>";
+      echo "<br>";
+      $noth=1;
+    }if(strpos($language,"s") !== false){
+      echo "<a href='scratch.php'><button>Scratch</button></a>";
+      echo "<br>";
+      $noth=1;
+    }elseif ($noth==0){
+      echo "Ooops, You have not yet registered for any courses!";
+    }
+  ?>
+
 </div>
 
 
