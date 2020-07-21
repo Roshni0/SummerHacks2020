@@ -1,29 +1,17 @@
 <!DOCTYPE html> 
 <html> 
-  
 <head> 
 </head> 
-  
 <body>  
-      
-    <h1 style="color:green;"> 
-    Question One
-    </h1> 
-      
-    <h3> 
-       Which of the following would print out 'Hello, my name is Bob'?
-    </h3> 
-      
+    <h1 style="color:green;">Question One</h1>  
+    <h3>Which of the following would print out 'Hello, my name is Bob'?</h3>   
     <form> 
         <input type="radio" name="Hello" id="w1"
             value="w1">print(Hello, my name is Bob)<br> 
-          
         <input type="radio" name="Hello" id="w2"
-            value="w2">print('Hello')<br> 
-          
+            value="w2">print('Hello')<br>
         <input type="radio" name="Hello" id="c1"
             value="c1">print('Hello, my name is Bob')<br><br> 
-      
         <button type="button" onclick="display()"> 
             Submit 
         </button> 
