@@ -1,29 +1,17 @@
 <!DOCTYPE html> 
 <html> 
-  
 <head> 
 </head> 
-  
 <body>  
-      
-    <h1 style="color:green;"> 
-    Question One
-    </h1> 
-      
-    <h3> 
-       Which of the following would store the word yellow in the variable 'colour'?
-    </h3> 
-      
+    <h1 style="color:green;">Question One</h1> 
+    <h3>Which of the following would store the word yellow in the variable 'colour'?</h3>   
     <form> 
         <input type="radio" name="Hello" id="w1"
             value="w1">colour=yellow<br> 
-          
         <input type="radio" name="Hello" id="c1"
             value="c1">colour = "yellow"<br> 
-          
         <input type="radio" name="Hello" id="w2"
             value="w2">color = "yellow"<br><br> 
-      
         <button type="button" onclick="display()"> 
             Submit 
         </button> 
