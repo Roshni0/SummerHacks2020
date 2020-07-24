@@ -2,128 +2,128 @@
   <head>
   </head>
   <body>
-  <style>
-  body {
-    background: #FFF;
-    padding-top: 10px;
-  }
-  p {
-    color: red;
-    font-family: "Courier";
-    font-size: 20px;
-    opacity: 0;
-    animation: type 90s steps(60, end) forwards;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  p:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  p:nth-child(3) {
-    animation-delay: 1.5s;
-  }
-  p:nth-child(4) {
-    animation-delay: 2.5s;
-  }
-  p:nth-child(5) {
-    animation-delay: 3.5s;
-  }
-  p:nth-child(6) {
-    animation-delay: 4.5s;
-    margin-bottom: 25px;
-  }
-  p:nth-child(7) {
-    animation-delay: 5.5s;
-  }
-  p:nth-child(8) {
-    animation-delay: 6.5s;
-  }
-  p:nth-child(9) {
-    animation-delay: 7.5s;
-  }
-  p:nth-child(10) {
-    animation-delay: 8.5s;
-  }
-  p:nth-child(11) {
-    animation-delay: 9.5s;
-  }
-  p:nth-child(12) {
-    animation-delay: 10.5s;
-  }
-  p:nth-child(13) {
-    animation-delay: 11.5s;
-  }
-  p:nth-child(14) {
-    animation-delay: 12.5s;
-  }
-  p:nth-child(15) {
-    animation-delay: 13.5s;
-  }
-  p:nth-child(16) {
-    animation-delay: 14.5s;
-  }
-  p:nth-child(17) {
-    animation-delay: 15.5s;
-  }
-  p:nth-child(18) {
-    animation-delay: 16.5s;
-  }
-  p:nth-child(19) {
-    animation-delay:17.5s;
-  }
-  p:nth-child(20) {
-    animation-delay: 18.5s;
-  }
-  p:nth-child(21) {
-    animation-delay: 19.5s;
-  }
-  p:nth-child(22) {
-    animation-delay: 20.5s;
-  }
-  p:nth-child(23) {
-    animation-delay: 21.5s;
-  }
-  p:nth-child(24) {
-    animation-delay: 22.5s;
-  }
-  p:nth-child(25) {
-    animation-delay: 23.5s;
-  }
-  p:nth-child(26) {
-    animation-delay: 24.5s;
-  }
-  p:nth-child(27) {
-    animation-delay: 25.5s;
-  }
-  p:nth-child(28) {
-    animation-delay: 26.5s;
-  }
-  p:nth-child(29) {
-    animation-delay: 27.5s;
-  }
-  p:nth-child(30) {
-    animation-delay: 28.5s;
-  }
-  @keyframes type {
-    0% {
-      opacity: 1;
+    <style>
+    body {
+      background: #FFF;
+      padding-top: 10px;
     }
-    100% {
-      width: 30em;
-      opacity: 1;
-    }
-  }
-  @keyframes blink {
-    from {
+    p {
+      color: red;
+      font-family: "Courier";
+      font-size: 20px;
       opacity: 0;
+      animation: type 90s steps(60, end) forwards;
+      -webkit-user-select: none;
+      user-select: none;
     }
-    to {
-      opacity: 1;
+    p:nth-child(2) {
+      animation-delay: 0.5s;
     }
-  }
-  ::selection {
-    background: black;
-  }
+    p:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+    p:nth-child(4) {
+      animation-delay: 2.5s;
+    }
+    p:nth-child(5) {
+      animation-delay: 3.5s;
+    }
+    p:nth-child(6) {
+      animation-delay: 4.5s;
+      margin-bottom: 25px;
+    }
+    p:nth-child(7) {
+      animation-delay: 5.5s;
+    }
+    p:nth-child(8) {
+      animation-delay: 6.5s;
+    }
+    p:nth-child(9) {
+      animation-delay: 7.5s;
+    }
+    p:nth-child(10) {
+      animation-delay: 8.5s;
+    }
+    p:nth-child(11) {
+      animation-delay: 9.5s;
+    }
+    p:nth-child(12) {
+      animation-delay: 10.5s;
+    }
+    p:nth-child(13) {
+      animation-delay: 11.5s;
+    }
+    p:nth-child(14) {
+      animation-delay: 12.5s;
+    }
+    p:nth-child(15) {
+      animation-delay: 13.5s;
+    }
+    p:nth-child(16) {
+      animation-delay: 14.5s;
+    }
+    p:nth-child(17) {
+      animation-delay: 15.5s;
+    }
+    p:nth-child(18) {
+      animation-delay: 16.5s;
+    }
+    p:nth-child(19) {
+      animation-delay:17.5s;
+    }
+    p:nth-child(20) {
+      animation-delay: 18.5s;
+    }
+    p:nth-child(21) {
+      animation-delay: 19.5s;
+    }
+    p:nth-child(22) {
+      animation-delay: 20.5s;
+    }
+    p:nth-child(23) {
+      animation-delay: 21.5s;
+    }
+    p:nth-child(24) {
+      animation-delay: 22.5s;
+    }
+    p:nth-child(25) {
+      animation-delay: 23.5s;
+    }
+    p:nth-child(26) {
+      animation-delay: 24.5s;
+    }
+    p:nth-child(27) {
+      animation-delay: 25.5s;
+    }
+    p:nth-child(28) {
+      animation-delay: 26.5s;
+    }
+    p:nth-child(29) {
+      animation-delay: 27.5s;
+    }
+    p:nth-child(30) {
+      animation-delay: 28.5s;
+    }
+    @keyframes type {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        width: 30em;
+        opacity: 1;
+      }
+    }
+    @keyframes blink {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    ::selection {
+      background: black;
+    }
   </style>
   <p>ARITHMETIC CALCULATIONS</p>
   <p>A key and important skill is being able to do arithmetics in programming</p>
