@@ -12,13 +12,10 @@
             value="w2">result=10*5<br> 
         <input type="radio" name="Hello" id="c1"
             value="c1">result=10+5<br><br> 
-        <button type="button" onclick="display()"> 
-            Submit 
-        </button> 
+        <button type="button" onclick="display()">Submit </button> 
     </form> 
     <br> 
-    <div id="disp" style= 
-        "color:green; font-size:18px; font-weight:bold;"> 
+    <div id="disp" style="color:green; font-size:18px; font-weight:bold;"> 
     </div>  
 </body>  
     <script> 
