@@ -3,13 +3,8 @@
   <head> 
   </head> 
   <body>  
-
-      <h1 style="color:green;"> 
-      Question Two
-      </h1> 
-      <h3> 
-         Which of the following would store the result of 5+5/5?
-      </h3> 
+      <h1 style="color:green;">Question Two</h1> 
+      <h3>Which of the following would store the result of 5+5/5?</h3> 
       <form> 
           <input type="radio" name="Hello" id="w1"
               value="w1">5+5/5<br> 
@@ -17,13 +12,10 @@
               value="w2">5/5/5<br> 
           <input type="radio" name="Hello" id="c1"
               value="c1">result=5+5/5<br><br> 
-          <button type="button" onclick="display()"> 
-              Submit 
-          </button> 
+          <button type="button" onclick="display()"> Submit </button> 
       </form> 
       <br> 
-      <div id="disp" style= 
-          "color:green; font-size:18px; font-weight:bold;"> 
+      <div id="disp" style="color:green; font-size:18px; font-weight:bold;"> 
       </div>  
   </body>  
       <script> 
