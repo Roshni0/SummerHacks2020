@@ -1,29 +1,22 @@
 <!DOCTYPE html> 
 <html> 
-  
   <head> 
   </head> 
-
   <body>  
 
       <h1 style="color:green;"> 
       Question Two
       </h1> 
-
       <h3> 
          Which of the following would store the result of 5+5/5?
       </h3> 
-
       <form> 
           <input type="radio" name="Hello" id="w1"
               value="w1">5+5/5<br> 
-
           <input type="radio" name="Hello" id="w2"
               value="w2">5/5/5<br> 
-
           <input type="radio" name="Hello" id="c1"
               value="c1">result=5+5/5<br><br> 
-
           <button type="button" onclick="display()"> 
               Submit 
           </button> 
@@ -40,7 +33,6 @@
                       var str = "Next Question";
                       var result = str.link("partFourQuestionThree.php");
                       document.getElementById("disp").innerHTML = partOne  + "      " + result;
-
               } 
               else if(document.getElementById('w2').checked) { 
                  var partOne = "Not Quite! Remember, you need to store the result in a variable, and check that the operations are correct";  
