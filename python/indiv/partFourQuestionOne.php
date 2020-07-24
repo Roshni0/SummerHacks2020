@@ -1,28 +1,17 @@
 <!DOCTYPE html> 
 <html>   
 <head> 
-</head> 
-  
+</head>   
 <body>  
-      
-    <h1 style="color:green;"> 
-    Question One
-    </h1> 
-      
-    <h3> 
-       Which of the following would store the result of the addition of 10+5?
-    </h3> 
-      
+    <h1 style="color:green;">Question One</h1>  
+    <h3>Which of the following would store the result of the addition of 10+5?</h3>   
     <form> 
         <input type="radio" name="Hello" id="w1"
             value="w1">result=10 + "add" + 5<br> 
-          
         <input type="radio" name="Hello" id="w2"
             value="w2">result=10*5<br> 
-          
         <input type="radio" name="Hello" id="c1"
             value="c1">result=10+5<br><br> 
-      
         <button type="button" onclick="display()"> 
             Submit 
         </button> 
