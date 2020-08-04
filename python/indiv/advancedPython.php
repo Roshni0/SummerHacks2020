@@ -3,7 +3,7 @@
 <title>TeachMe</title>
 <head>
 <link rel="shortcut icon" href="logo.JPG" type="image/x-icon">
-</head>
+</head> 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
