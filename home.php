@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Teach Programming to young kids</title>
+<title>TeachMe</title>
+<head>
+<link rel="shortcut icon" href="logo.JPG" type="image/x-icon">
+</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -50,7 +53,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 40%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -99,15 +102,12 @@ span.psw {
 <body>
 
 <!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
+<div class="w3-top" style="background:red;">
+  <div class="w3-bar w3-black w3-card"style="background:red;">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#whatwedo" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHAT WE DO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
     <button onclick="document.getElementById('login').style.display='block'" style="width:auto;text-color:white;float: right;" class="w3-bar-item w3-button w3-padding-large">LOGIN</button>
     <button onclick="document.getElementById('register').style.display='block'" style="width:auto;text-color:white;float: right" class="w3-bar-item w3-button w3-padding-large">REGISTER</button>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
     
   </div>
 </div>
@@ -121,46 +121,48 @@ span.psw {
 </div>
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<div class="w3-content" style="max-width:2000px;margin-top:46px;background-image: url('bg.jpg');">s
   <!-- The What we do Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="whatwedo">
-    <h2 class="w3-wide">WHAT WE DO</h2>
-    <p class="w3-opacity"><i>OUR AIM: Teach Programming to young children</i></p>
-    <p class="w3-justify">Young children </p>
+  <div style="text-align:center;">
+  
+  <p>
+  <p>
+  <p>
+  <p>
+  <br>
+  <a href="https://fontmeme.com/fonts/opti-futura-font/"><img src="https://fontmeme.com/permalink/200804/dd1f334c5b58d7030a22c08cbefe9af0.png" alt="opti-futura-font" border="0"></a>
+  <p>
+  <p>
+  <br>
+  <p>
+  <p>
+  <a href="https://fontmeme.com/fonts/opti-futura-font/"><img src="https://fontmeme.com/permalink/200804/69b0cda07ffc17ba8217b522a9e37f23.png" alt="opti-futura-font" border="0"></a>
+  <p>
+  <br>
+  <p>
+  <p>
+  <p>
+  <a href="https://fontmeme.com/fonts/opti-futura-font/"><img src="https://fontmeme.com/permalink/200804/6a1a70d462b5e30eea1b3deac6e4dabe.png" alt="opti-futura-font" border="0"></a>
+  <p>
+  <p>
+  <p>
+  <br>
+  <p>YOU can learn the basics of lots of popular PROGRAMMING languages from Scratch to HTML to Python to PHP! We want to give YOU the option to try different languages before deciding on one to learn!</p>
+  <p>
+  <p>
+  <p>
+  <br>
+  <img src="tenor.gif">
   </div>
   <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
-    </div>
-  </div>
+  
   <div id="login" class="modal">
   <form class="modal-content animate" action="logincheck.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <img src="avatar.png" alt="Avatar" style="height:100px;">
     </div>
-    <div class="container">
+    <div class="container" style="text-align:center;">
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
       <p></p>
@@ -182,9 +184,9 @@ span.psw {
   <form class="modal-content animate" action="registercheck.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <img src="avatar.png" alt="Avatar" style="height:100px;">
     </div>
-    <div class="container">
+    <div class="container" style="text-align:center;">
         <label for="fname"><b>First name</b></label>
       <input type="text" placeholder="Enter First Name" name="fname" required>
       <p></p>
@@ -210,18 +212,7 @@ span.psw {
 <!-- End Page Content -->
 </div>
 
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-</footer>
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
