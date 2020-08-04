@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<title>TeachMe</title>
+<head>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+</head>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -9,7 +13,7 @@ body {font-family: Arial;}
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: #ffcccb;
 }
 
 /* Style the buttons inside the tab */
@@ -26,43 +30,45 @@ body {font-family: Arial;}
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #ADD8E6;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #ffcccb;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffcccb;
   border-top: none;
 }
 </style>
 </head>
-<body>
+<body style="background-image: url('bg.jpg')">
 
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
-  <button class="tablinks" onclick="openCity(event, 'Learn')">Learn</button>
+  <button class="tablinks" onclick="openCity(event, 'Home')">Courses available</button>
+  <button class="tablinks" onclick="openCity(event, 'Learn')">Courses you have picked!</button>
 </div>
 
-<div id="Home" class="tabcontent">
-  <h3>Courses</h3>
-  <a href='python.php'><button>Python</button></a>
+<div id="Home" class="tabcontent" style="display:block;background-color:white;">
+  <h3>Courses Available!</h3>
+  <a href='python/pageOne.php'><button style="background-color:#ffcccb;">Python</button></a>
   <p></p>
-  <a href='CPlus.php'><button>C++</button></a>
+  <a href='cplus/pageOne.php'><button style="background-color:#ADD8E6;">C++</button></a>
   <p></p>
-  <a href='HTML.php'><button>HTML</button></a>
+  <a href='HTML.php'><button style="background-color:#ffcccb;">HTML</button></a>
   <p></p>
-  <a href='scratch.php'><button>Scratch</button></a>
+  <a href='scratch.php'><button style="background-color:#ADD8E6;">Scratch</button></a>
+  <p></p>
+  <a href='phpteach.php'><button style="background-color:#ffcccb;">PHP</button></a>
 </div>
 
-<div id="Learn" class="tabcontent">
+<div id="Learn" class="tabcontent" style="background-color:white;">
   <h3>Learn</h3>
   <?php
     require "connection.php";
@@ -86,7 +92,6 @@ body {font-family: Arial;}
       }
     }
     $noth=0;
-    echo "You have signed up for: ";
     echo "<br>";
     if(strpos($language,"p") !== false){
       echo "<a href='python.php'><button>Python</button></a>";
@@ -110,6 +115,13 @@ body {font-family: Arial;}
   ?>
 
 </div>
+<p>
+  <p>
+  <p>
+  <br>
+  <div style="text-align: center;">
+  <img src="tenor.gif">
+  </div>
 
 
 <script>
